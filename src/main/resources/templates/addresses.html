@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout :: layout(~{::title}, ~{::section})">
+
+<head>
+    <title>Adresses</title>
+</head>
+
+<body>
+
+<section>
+    <h1>Les différentes adresses : </h1>
+
+    <ul th:each="address: ${allAddresses}">
+        <li th:text="${address.content} + ', recherché par : ' + ${address.author}" />
+    </ul>
+</section>
+
+</body>
+</html>

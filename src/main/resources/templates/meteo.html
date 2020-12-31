@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout :: layout(~{::title}, ~{::section})">
+
+<head>
+    <title>Adresse</title>
+</head>
+
+<body>
+
+<section>
+    <h1>Recherche adresse : </h1>
+
+    <p th:text="'Adresse : ' + ${adresse} + ' !'"/>
+    <p th:text="'Code postal : ' + ${codepostal} + ' !'"/>
+    <p th:text="'Ville : ' + ${ville} + ' !'"/>
+    <p>GeoApiUrl : <a th:href="${GeoApiUrl}" th:text="${GeoApiUrl}"></a>  !</p>
+    <p th:text="'Latitude : ' + ${lat} + ' !'"/>
+    <p th:text="'Longitude : ' + ${lon} + ' !'"/>
+    <p>Current Weather : <a th:href="${apiMeteoUrl}" th:text="${apiMeteoUrl}"></a>  !</p>
+    <p th:text="'Température : ' + ${temp} + '°C !'"/>
+    <p>OneCall API : <a th:href="${apiMeteoUrl2}" th:text="${apiMeteoUrl2}"></a>  !</p>
+    <p th:text="'Prevision pour demain : ' + ${previsionLendemain}"/>
+    <p th:text="'Date (pour la prévision) : ' + ${datePrevision}"/>
+</section>
+
+</body>
+</html>

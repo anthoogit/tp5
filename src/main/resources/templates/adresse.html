@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout :: layout(~{::title}, ~{::section})">
+
+<head>
+    <title>Adresse</title>
+</head>
+
+<body>
+
+<section>
+    <h1>Recherche adresse : </h1>
+
+    <p th:text="'Bonjour ' + ${addressQuery} + ' !'"/>
+
+    <form th:action="@{/meteo}" method="POST">
+        <label for="adresse">Adresse : </label><input type="text" id="adresse" name="adresse"/>
+        <label for="codepostal">Code postal : </label><input type="text" id="codepostal" name="codepostal"/>
+        <label for="ville">Ville : </label><input type="text" id="ville" name="ville"/>
+
+        <input type="submit" value="Rechercher">
+    </form>
+</section>
+
+</body>
+</html>
